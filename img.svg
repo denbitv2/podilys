@@ -1,0 +1,17 @@
+<svg width="780" height="250" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="250" width="780" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect stroke="#ffffff" transform="matrix(0.8600063194261484,-0.557589807979089,0.6187867184645679,0.7749532176442265,-48.18030653878154,84.21243808038263) " id="svg_1" height="84" width="101" y="118.699587" x="17.878837" stroke-width="2.5" fill="none"/>
+  <rect stroke="#187ae2" transform="matrix(0.8600063194261484,-0.557589807979089,0.6187867184645679,0.7749532176442265,-36.91179527321968,125.25765595624068) " id="svg_3" height="84" width="101" y="123.699587" x="89.878837" stroke-width="1.5" fill="none"/>
+  <text stroke="#33666C" transform="matrix(1.0594847202301025,0,0,0.9547035579169574,-2.7647417569542085,2.0797173268606386) " xml:space="preserve" text-anchor="start" font-family="'Trebuchet MS', Gadget, sans-serif" font-size="63" id="svg_4" y="192.536516" x="248.994634" stroke-width="0" fill="#08e280">Поділись своїм</text>
+  <rect stroke="#e28018" transform="matrix(0.8571411439467397,-0.5611606716547405,0.6227494935804712,0.7723714029450454,-42.848632309688554,105.35030568451526) " id="svg_5" height="36.544141" width="45" y="145.030382" x="81.183293" stroke-width="11.5" fill="#e28018"/>
+ </g>
+</svg>
