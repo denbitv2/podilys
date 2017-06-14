@@ -189,6 +189,13 @@ footer{
     background-color: rgba(68,68,68,1.00); position: fixed; bottom: 0px; left: 0px; width: 100%; height: 170px; z-index: 13;
 }
 
+span.popmenu{
+    color: rgba(224, 129, 24, 0.95);
+    padding: 5px;
+    background-color: #565656;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 18px;
+}
     @media screen and (max-width: 1400px)  and (min-width: 1271px) { /*note book*/
 
         .left{
@@ -245,12 +252,17 @@ footer{
        width: 100%;    height: 100%;
     }
     table{
-        width: 300px;
+        width: 40%;
         height: 150px;
-        position: relative;
-        left: 10%;
-        top: 60px;
+        /* position: relative; */
+        /* left: 10%; */
+        /* top: 30px; */
+        background-color: #a7a5a5;
+        padding: 15px;
+        margin-left: 10%;
     }
+	td{line-height:40px;
+	height: 50px;}
 
     @media screen and (max-width: 725px)  {
         .ashow{
@@ -286,6 +298,10 @@ footer{
 
     }
 
+	.info{    display: block;
+    width: 87px;
+    height: 55px;
+    line-height: 55px;}
 </style>
 </head>
 
@@ -331,29 +347,39 @@ footer{
 <p class="second"><br /> Очень часто возникает желание <u>поделиться</u> чем либо, отпустить груз, лишь бы  человек <u>выслушал тебя</u>,  расказать о своих проблемах, о том что не дает покоя, и всегда возникает одно большое <span class="but">НО</span>. Говоря о проблемах ты можешь скомпроментировать себя, испортить себе репутацию и много других трудностей происходят при попытке поделиться со знакомым человеком. Поэтому не секрет, что <u>незнакомому все это легче сказать</u>. Однако не всегда он оказывается рядом в нужный момент, <u>мы с вами всегда</u> <span class="but">"Поділись своїм"</span>  </p>
 <div style="clear:both; z-index:7; position:relative; color:rgba(0,0,0,1); position:absolute; bottom:10px; text-align:center; width:80%">Copyright</div>
 <footer > </footer>
+<div id="menu" style="display: none" >
+    <div style="    background-color: #07c8d2;
+    padding: 46px 0px 5px 10%"><span id='stab' class="popmenu">Секрети</span><span id='ptab' class="popmenu">Проблеми</span></div>
+    <table  id=secret>
+        <form action='?action=add' method=post>
+            <input type='hidden' value='secret' name='subject'>
+            <tr><td class="info">Тема...</td><td><input type=text name=topic></td></tr>
+            <tr><td>Зміст</td><td><textarea name=content></textarea></td></tr>
+            <tr><td></td><td><input  name='sent' type=button value='Post'></td></tr>
+        </form>
+    </table>
+    <table id=problems style='display:none'>
+        <form action='?action=add'   method=post>
+            <input type='hidden' value='problem' name='subject'>
+            <tr><td>Тема... Ghj</td><td><input type=text name=topic></td></tr>
+            <tr><td>Зміст</td><td><textarea name=content></textarea></td></tr>
+            <tr><td></td><td><input  name='sent' type=button value='Post'></td></tr>
+        </form>
+    </table>
+</div>
 <script
 			  src="https://code.jquery.com/jquery-3.2.1.min.js"
 			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 			  crossorigin="anonymous"></script>
-			  <script>//$(document).ready(function (){
-				  /*if (location.hash=='#add'){
-					
-				  var txt3 = document.createElement("div");  // Create with DOM
-				   var inner=document.createElement("div");
-				   inner.style='position:absolute; width:50%; height:50%; left:25%; top:25%; background-color:white;';
-				   inner.innerHTML = "<form action='?action=add' method=post><input type=text name=topic><textarea name=content></textarea> <input type=submit></form>";
-				   txt3.appendChild(inner);
-				  txt3.style='position:absolute; width:100%; height:100%; background-color:rgba(1, 11, 76, 0.43);left: 0px; z-index: 1000;'
-   
-				  $('body').append(txt3); 
-				  }
-			  });*/
+			  <script>
 			  $('#add').click(function () {
 				  var txt3 = document.createElement("div");				  // Create with DOM
                   txt3.setAttribute('id','bubble');
 				   var inner=document.createElement("div");
-				   inner.style='position:absolute; width:50%; height:50%; left:25%; top:25%; background-color:white;';
-				   inner.innerHTML = "<form action='?action=add' method=post><table><caption>Прошу ввести повідомлення</caption><tr><td>Тема...</td><td><input type=text name=topic></td></tr><tr><td>Зміст</td><td><textarea name=content></textarea></td></tr><tr><td></td><td><input  name='sent' type=button value='Post'></td></tr></form>";
+				   inner.style='position:absolute; width:30%; height:40%; left:25%; top:25%; background-color: #b5bbbb;';
+
+				   inner.innerHTML =  $('#menu').html();
+                  $('#menu').html('');
 				   txt3.appendChild(inner);
 				  txt3.style='position:absolute; width:100%; height:100%; background-color:rgba(1, 11, 76, 0.43);left: 0px; z-index: 1000;'
    
@@ -363,9 +389,16 @@ footer{
                       $('#bubble').remove();
 
                   });
+                  $('#stab').click(function () { $('#secret').show();$('#problems').hide();
+
+                  });
+                  $('#ptab').click(function () { $('#problems').show();$('#secret').hide();
+
+                  });
 				 
 			  });
 
 			  </script>
 </body>
 </html>
+

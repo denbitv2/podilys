@@ -5,9 +5,9 @@
  * Date: 29.05.2017
  * Time: 10:36
  */
-
+const DB='sqlite:dbs/mysqlitedb.db';
 function add($x){
-    $dbhandle = new PDO('sqlite:mysqlitedb.db');// sqlite_open('mysqlitedb', 0666, $sqliteerror);
+    $dbhandle = new PDO(DB);// sqlite_open('mysqlitedb', 0666, $sqliteerror);
     $query  = "insert into  problems(`name`,`content`) values('".$x[0]."','".$x[1]."')";
     $dbhandle->query($query);
     print_r( $dbhandle->errorInfo());
@@ -17,7 +17,7 @@ function add($x){
 
 function create(){
 
-$dbhandle = new PDO('sqlite:mysqlitedb.db');// sqlite_open('mysqlitedb', 0666, $sqliteerror);
+$dbhandle = new PDO(DB);// sqlite_open('mysqlitedb', 0666, $sqliteerror);
     $query  = "create table problems(id int NOT NULL PRIMARY KEY, name VARCHAR(25),content text)";
     $dbhandle->query($query);
 	print_r( $dbhandle->errorInfo());
@@ -31,7 +31,7 @@ $problems='';
 $issues='';
 function show(){
 global $problems,$issues;
-    $dbhandle = new PDO('sqlite:mysqlitedb.db');// sqlite_open('mysqlitedb', 0666, $sqliteerror);
+    $dbhandle = new PDO(DB);// sqlite_open('mysqlitedb', 0666, $sqliteerror);
     $query  = "select name,content from problems";
     $x=$dbhandle->query($query);
     //print_r( $dbhandle->errorInfo());
@@ -62,5 +62,6 @@ if($_GET['action']=='add'){
 	add($x);
 	}
 }
+
 
 ?>
