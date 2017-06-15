@@ -1,0 +1,416 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Podilys</title>
+    <link rel='stylesheet' id='Cuprum-google-font-css'  href='https://fonts.googleapis.com/css?family=Cuprum%3Aregular%2Citalic%2C700%2C700italic&#038;subset=cyrillic%2Clatin%2Clatin-ext&#038;ver=4.7.5' type='text/css' media='all' />
+    <style>
+
+        body{background-color: rgba(29,29,29,1.00); font-family: "Verdana", "New York", serif;}
+        .left{
+            z-index: 10;
+            background-color: rgba(29,29,29,1.00);
+            width: 70%;
+            top: 0px;
+            left: 0px;
+            position: absolute;
+            height: 100%;
+            background-image: url(imgs/s.jpg);
+            background-origin: border-box;
+            background-size: 1000px;
+            background-position: -150px 0px;
+            background-repeat: no-repeat;	/*background-color:rgba(168,98,179,1);*/
+        }
+        .rightback{
+            position: absolute;
+            z-index: 10;
+            background-color: rgba(29,29,29,1.00);
+            top: 0px;
+            right: 0px;
+            width: 440px;
+            height: 100%;
+        }
+
+        h1{ visibility:hidden;
+            text-align: right;
+            color: rgba(255,255,255,1.00);
+            margin-right: 40px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        h2{
+            color: #4a4a4a;
+            background-color: rgb(7, 210, 119);
+            text-align: center;
+            margin-right: 5px;
+            padding: 0px 15px 15px 15px;
+            margin-top: 0;
+            text-shadow: 0px 0px #4A4A4A;
+        }
+        h2.l{ border-top: 25px #4294eb  solid;}
+        h3 {
+            font-family: "Cuprum" !important;
+            text-indent: 10px;
+            font-size: 20px;
+            margin: 5px;
+
+
+        }
+        .ashow{
+            position: relative;
+            width: 45%;
+            height: 77%;
+            left: 30px;
+            /*top: -20px;*/
+            z-index: 11;
+            clear: none;
+            float: left;
+            overflow: auto;
+            /* [disabled]margin-top: 5px; */
+            border-bottom: thin solid #F2C492;
+            min-height: 262px;
+        }
+        .ashow::-webkit-scrollbar{width: 0px;
+        }
+        .ashow { -ms-overflow-style: none; }
+        p.second >u {color: aliceblue;}
+        p.second{
+            display: block;
+            position: relative;
+            clear: none;
+            float: left;
+            width: 17%;
+            height: 40%;
+            top: 418px;
+            z-index: 14;
+            /* border-width: 1px; */
+            /* border-style: solid; */
+            /* border-color: rgba(0,102,0,0.8); */
+            border-radius: 0px;
+            margin: 10px;
+            box-shadow: 4px 0px 2px -2px rgba(0, 0, 0, 0.7), 16px 0px 10px -10px rgba(0, 0, 0, 0.5);
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 12px;
+            color: #1d1d1d;
+            line-height: 16px;
+            /* font-weight: bold; */
+            font-variant: normal;
+            text-align: justify;
+            outline-offset: inherit;
+            padding: 12px 15px 26px 15px;
+            background-color: rgb(7, 200, 210);
+        }
+        .main{
+            position: absolute;
+            width: 65%;
+            right: 78px;
+            height: 80%;
+            top: 126px;
+            background-color: rgba(224, 129, 24, 0.95);
+            /*	background-color:#0066FF;*/
+
+            z-index: 58;
+            padding-right: 0px;
+            margin-right: 56px;
+            clear: none;
+            float: left;
+            margin-bottom: 19px;
+            min-height: 300px;
+            overflow: hidden;
+        }
+        .menu{
+            padding-left: 150px;
+            border-top: 22px solid #07c8d2;
+            padding-bottom: 10px;
+            font-size: 14px;
+            font-family: Tahoma, Geneva, sans-serif;
+            background-color: rgb(63, 77, 64);
+        }
+
+
+
+        /*.menu:after{
+            vertical-align:top;
+            content:">";
+            padding-left: 50px;
+
+            color:rgba(255,255,255,0.7);
+            font-style: normal;
+            text-shadow: 13px -13px 3px rgba(11,11,11,0.7);
+        }.menu:before{
+            vertical-align:top;
+            content:"<";
+            padding-right: 50px;
+            font-size: 14px;
+            font-family: Tahoma, Geneva, sans-serif;
+            color:rgba(11,11,11,0.7);
+            font-style: normal;
+            text-shadow: -13px -13px 3px rgba(255,255,255,1);
+        }*/
+        a {
+            padding: 10px;
+            margin: 1px;
+            font-size: 19px;
+            color: rgb(88,161,237);
+            text-decoration: none;
+        }
+        .lr{
+            margin-right: 30px;
+
+        }
+        a.mainmenu:hover{
+            background-color: #4294EB;
+            color: rgb(255, 255, 255);    /* text-decoration: underline; */
+        }
+        input[type=button]{
+            background-color:rgba(102,153,255,1);
+            color:#FFFFFF;
+            border-radius:2px;
+            padding:3px;
+            margin:10px;
+            border-color:rgba(102,0,180,0.5);
+            border-style:solid;
+            border-width:1px;
+            text-shadow:0px 1px 2px #000000;
+        }
+        input[type=button]:active{
+            background-color:rgba(102,51,255,0.7);
+        }
+        textarea{width: 300px;
+            height: 100px;}
+        input[type=text]{    width: 300px;}
+        .but{
+            font-size:20px;
+            color:#FFFFFF;
+            letter-spacing:2px;
+        }
+        footer{
+            background-color: rgba(68,68,68,1.00); position: fixed; bottom: 0px; left: 0px; width: 100%; height: 170px; z-index: 13;
+        }
+
+        span.popmenu{
+
+            padding: 5px;
+cursor: pointer;
+            font-family: Tahoma, Geneva, sans-serif;
+            font-size: 18px;
+        }
+        .active{color: #08e280;
+        background-color:#868484;
+        }
+        .nonactive{
+            color: rgba(224, 129, 24, 0.95);
+            background-color: #565656;
+        }
+        @media screen and (max-width: 1400px)  and (min-width: 1271px) { /*note book*/
+
+            .left{
+                background-size: 1120px;
+                width: 80%;
+            }
+        }
+        @media screen and (max-width: 1270px)  {
+
+            .left{
+                background-size: 1000px;
+                width: 70%;
+            }
+        }
+        @media screen and (max-width: 1200px)  {
+            .main{
+                width: 73%;
+                right: 0px;
+            }
+            .left{
+                background-size: 920px;
+
+            }
+        }
+        @media screen and (max-width: 1150px)  {
+            .menu{
+                padding-left: 100px;}
+        }
+        @media screen and (max-width: 1040px)  {
+            .menu{
+                padding-left: 40px;}
+        }
+        @media screen and (max-width: 1025px)  {
+            .menu{
+                padding-left: 40px;}
+            .main {
+                width: 65%;
+                left: 40px;
+            }
+            .left {
+                background-size: 1000px;
+                width: 90%;}
+            p.second{
+                right: 24px;
+                position: absolute;
+                top: 140px;
+            }
+            footer{
+                height: 60px;
+            }
+        }
+
+        form{
+            width: 100%;    height: 100%;
+        }
+        table{
+            width: 40%;
+            height: 150px;
+            /* position: relative; */
+            /* left: 10%; */
+            /* top: 30px; */
+            background-color: #a7a5a5;
+            padding: 15px;
+            margin-left: 10%;
+        }
+        td{line-height:40px;
+            height: 50px;}
+
+        @media screen and (max-width: 725px)  {
+            .ashow{
+                width: 90%;
+                min-height: 0px;
+                padding-left: 10px;
+            }
+            .menu{
+                padding-left: 0px;
+                text-align: center;
+            }
+            .main {
+                width: 90%;
+                left: 40px;
+                top: 171px;}
+            a{
+                font-size: 35px;
+            }
+            .lr {
+
+                height: 6%;
+            }
+            h3{ font-size: 31px;}
+            p.second {
+                right: -10px;
+                position: absolute;
+                font-size: 23px;
+                line-height: 23px;
+                width: 97%;
+                height: 10%;
+                top: 84%;
+            }
+
+        }
+
+        .info{    display: block;
+            width: 87px;
+            height: 55px;
+            line-height: 55px;}
+    </style>
+</head>
+
+<body><div class="left">
+    <div id='image' style="
+    position: absolute;
+    left: 0px;
+    top: -95px;"><a href="/">
+        <svg width="780" height="250" xmlns="http://www.w3.org/2000/svg">
+            <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+            <g>
+                <title>Color</title>
+                <rect fill="none" id="canvas_background" height="250" width="780" y="-1" x="-1"/>
+                <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+                    <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+                </g>
+            </g>
+            <g>
+                <title>Img</title>
+                <rect stroke="#ffffff" transform="matrix(0.8600063194261484,-0.557589807979089,0.6187867184645679,0.7749532176442265,-48.18030653878154,84.21243808038263) " id="svg_1" height="84" width="101" y="118.699587" x="17.878837" stroke-width="2.5" fill="none"/>
+                <rect stroke="#187ae2" transform="matrix(0.8600063194261484,-0.557589807979089,0.6187867184645679,0.7749532176442265,-36.91179527321968,125.25765595624068) " id="svg_3" height="84" width="101" y="123.699587" x="89.878837" stroke-width="1.5" fill="none"/>
+                <text stroke="#33666C" transform="matrix(1.0594847202301025,0,0,0.9547035579169574,-2.7647417569542085,2.0797173268606386) " xml:space="preserve" text-anchor="start" font-family="'Trebuchet MS', Gadget, sans-serif" font-size="63" id="svg_4" y="192.536516" x="248.994634" stroke-width="0" fill="#08e280">Поділись своїм</text>
+                <rect stroke="#e28018" transform="matrix(0.8571411439467397,-0.5611606716547405,0.6227494935804712,0.7723714029450454,-42.848632309688554,105.35030568451526) " id="svg_5" height="36.544141" width="45" y="145.030382" x="81.183293" stroke-width="11.5" fill="#e28018"/>
+            </g>
+        </svg></a>
+    </div></div>
+<!--<div class="rightback"></div>-->
+<div class="main">
+
+    <div class="menu"><a href="#add" class="mainmenu" id='add' >Поділитися</a>|<a href="#"  class="mainmenu">Знайти запис</a>|<a href="?action=all"  class="mainmenu">Відобразити усі записи</a>|<a href="#" >Кролик:D</a></div>
+    <div class="ashow lr">
+        <h2 class="l">Ваши секреты</h2>
+        <?=$issues;?></div>
+
+    <div class="ashow rl">
+        <h2 class="l" >Ваши Проблемы</h2>
+        <?=$problems;?>
+        <a href="#" class="go" >previous</a>
+        <br />Запис 2<br /><br /><br />
+        <a href="#"  class="go">next</a><br />
+        Проблема<br /><input type="button" value="кнопка перехода"  /></div>
+</div>
+<p class="second"><br /> Очень часто возникает желание <u>поделиться</u> чем либо, отпустить груз, лишь бы  человек <u>выслушал тебя</u>,  расказать о своих проблемах, о том что не дает покоя, и всегда возникает одно большое <span class="but">НО</span>. Говоря о проблемах ты можешь скомпроментировать себя, испортить себе репутацию и много других трудностей происходят при попытке поделиться со знакомым человеком. Поэтому не секрет, что <u>незнакомому все это легче сказать</u>. Однако не всегда он оказывается рядом в нужный момент, <u>мы с вами всегда</u> <span class="but">"Поділись своїм"</span>  </p>
+<div style="clear:both; z-index:7; position:relative; color:rgba(0,0,0,1); position:absolute; bottom:10px; text-align:center; width:80%">Copyright</div>
+<footer > </footer>
+<div id="menu" style="display: none" >
+    <div style="    background-color: #07c8d2;
+    padding: 46px 0px 5px 10%"><span id='stab' class="popmenu active">Секрети</span><span id='ptab' class="popmenu nonactive">Проблеми</span></div>
+    <form action='?action=add'  id=secret method=post><table >
+
+            <input type='hidden' value='secrets' name='subject'>
+            <tr><td class="info">Секрет...</td><td><input type=text name=topic></td></tr>
+            <tr><td class="info">Зміст</td><td><textarea name=content></textarea></td></tr>
+            <tr><td></td><td><input   type='submit' value='Post'></td></tr>
+
+    </table></form> <form action='?action=add'  id=problems style='display:none' method=post>
+    <table >
+
+            <input type='hidden' value='problems' name='subject'>
+            <tr><td class="info">Проблема...</td><td><input type=text name=topic></td></tr>
+            <tr><td class="info">Зміст</td><td><textarea name=content></textarea></td></tr>
+            <tr><td></td><td><input   type='submit' value='Post'></td></tr>
+
+    </table></form>
+</div>
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script>
+    $('#add').click(function () {
+        var txt3 = document.createElement("div");				  // Create with DOM
+        txt3.setAttribute('id','bubble');
+        var inner=document.createElement("div");
+        inner.style='position:absolute; width:30%; height:40%; left:25%; top:25%; background-color: #b5bbbb;';
+
+        inner.innerHTML =  $('#menu').html();
+        $('#menu').html('');
+        txt3.appendChild(inner);
+        txt3.style='position:absolute; width:100%; height:100%; background-color:rgba(1, 11, 76, 0.43);left: 0px; z-index: 1000;'
+
+        $('body').append(txt3);
+        $('input[name=sent]').click(function(){
+            $('form').submit();
+            $('#bubble').remove();
+
+        });
+        $('#stab').click(function () {$(this).removeClass('nonactive');$(this).addClass('active');
+            $('#ptab').removeClass('active');$('#ptab').addClass('nonactive');
+            $('#secret').show();$('#problems').hide();
+
+        });
+        $('#ptab').click(function () {
+            $(this).removeClass('nonactive');$(this).addClass('active');
+            $('#stab').removeClass('active');$('#stab').addClass('nonactive');
+            $('#problems').show();$('#secret').hide();
+
+        });
+
+    });
+
+</script>
+</body>
+</html>
+

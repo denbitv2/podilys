@@ -6,9 +6,9 @@
  * Time: 10:36
  */
 const DB='sqlite:dbs/mysqlitedb.db';
-function add($x){
+function add($subject,$x){
     $dbhandle = new PDO(DB);// sqlite_open('mysqlitedb', 0666, $sqliteerror);
-    $query  = "insert into  problems(`name`,`content`) values('".$x[0]."','".$x[1]."')";
+    $query  = "insert into  {$subject}(`name`,`content`) values('".$x[0]."','".$x[1]."')";
     $dbhandle->query($query);
     print_r( $dbhandle->errorInfo());
 
@@ -29,10 +29,11 @@ $dbhandle = new PDO(DB);// sqlite_open('mysqlitedb', 0666, $sqliteerror);
 }
 $problems='';
 $issues='';
-function show(){
+function show($limit=true){
 global $problems,$issues;
+$qlimit=$limit?'limit 0,5':'';
     $dbhandle = new PDO(DB);// sqlite_open('mysqlitedb', 0666, $sqliteerror);
-    $query  = "select name,content from problems";
+    $query  = "select name,content from problems ORDER  by id desc $qlimit ";
     $x=$dbhandle->query($query);
     //print_r( $dbhandle->errorInfo());
     $result=$x->fetchAll();
@@ -41,7 +42,7 @@ global $problems,$issues;
         $generate.="<h3>{$key['name']}</h3><p style='font-size:10px;'>{$key['content']}</p>";
     }
     $problems=$generate;
-	 $query  = "select name,content from secrets";
+	 $query  = "select name,content from secrets ORDER  by id desc $qlimit";
     $x=$dbhandle->query($query);
     //print_r( $dbhandle->errorInfo());
     $result=$x->fetchAll();
@@ -53,14 +54,6 @@ global $problems,$issues;
     //include_once 'map..html';
 //sqlite_exec($dbhandle,$query);
     // sqlite_close($dbhandle);
-}
-show();
-if($_GET['action']=='add'){
-	$x[0]=$_POST['topic'];
-	$x[1]=$_POST['content'];
-	if(!empty($x[0])&&!empty($x[1])){
-	add($x);
-	}
 }
 
 
