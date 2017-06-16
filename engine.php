@@ -14,7 +14,29 @@ function add($subject,$x){
 
 }
 
+ function find($from,$what){
+	$dbhandle = new PDO(DB);
+$q="SELECT name,content FROM $from where name like '%{$what}%' OR content like '%{$what}%'  ORDER BY name asc";	
 
+$answ=$dbhandle->query($q);
+
+$result=$answ->fetchAll();
+ $generate="<h4 style='    color: #07c8d2;
+    text-decoration: underline;    
+    text-transform: uppercase;
+    text-align: center;'>Результати пошуку '$what'</h4>";
+	if (!count($result)){
+		$generate.='<h3>Нічого не знайдено</h3>'; return $generate;
+	}
+    foreach ($result as $key){
+        $generate.="<h3>{$key['name']}</h3><p style='font-size:10px;'>{$key['content']}</p>";
+		
+    }
+	return $generate;
+ }
+ 
+ 
+ 
 function create(){
 $log='';
 $dbhandle = new PDO(DB);// sqlite_open('mysqlitedb', 0666, $sqliteerror);
@@ -30,6 +52,7 @@ $dbhandle = new PDO(DB);// sqlite_open('mysqlitedb', 0666, $sqliteerror);
 }
 $problems='';
 $issues='';
+
 function show($limit=true){
 global $problems,$issues;
 $qlimit=$limit?'limit 0,5':'';

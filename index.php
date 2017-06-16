@@ -1,8 +1,20 @@
 <?php include 'engine.php';
+//var_dump($_GET); die;
 
 $action=$_GET['action'];
 switch ($action){
-    case 'all':
+    case 'find':
+	show();
+	
+	$where=$_GET['where'];; $what=$_GET['what'];;
+	if($where=='secrets'){
+		$issues=find($where,$what);
+	} elseif($where=='problems'){
+		$problems=find($where,$what);
+	}
+	
+	break;
+	case 'all':
         show(0);
         break;
     case 'add':
@@ -15,6 +27,7 @@ switch ($action){
         }
         show();
         break;
+	
     default:show();
 }
 
