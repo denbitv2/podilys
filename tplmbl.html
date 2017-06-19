@@ -11,15 +11,15 @@
         .left{
             z-index: 10;
             background-color: rgba(29,29,29,1.00);
-            width: 70%;
+            width: 100%;
             top: 0px;
             left: 0px;
             position: absolute;
             height: 100%;
-            background-image: url(imgs/s.jpg);
+            background-image: url(imgs/s_mini.jpg);
             background-origin: border-box;
-            background-size: 1000px;
-            background-position: -150px 0px;
+            background-size: 100%;
+            background-position: -50px 0px;
             background-repeat: no-repeat;	/*background-color:rgba(168,98,179,1);*/
         }
         .rightback{
@@ -47,42 +47,43 @@
             padding: 0px 15px 15px 15px;
             margin-top: 0;
             text-shadow: 0px 0px #4A4A4A;
+			width: 100%;
         }
         h2.l{ border-top: 25px #4294eb  solid;}
         h3 {
             font-family: "Cuprum" !important;
             text-indent: 10px;
-            font-size: 20px;
+            
             margin: 5px;
-
+ font-size: 31px;
 
         }
+		 
         .ashow{
-            position: relative;
-            width: 45%;
-            height: 77%;
-            left: 30px;
-            /*top: -20px;*/
-            z-index: 11;
+            position: relative;   
             clear: none;
-            float: left;
-            overflow: auto;
-            /* [disabled]margin-top: 5px; */
-            border-bottom: thin solid #F2C492;
-            min-height: 262px;
+            float: left; 
+			width: 100%;
+            
         }
         .ashow::-webkit-scrollbar{width: 0px;
         }
         .ashow { -ms-overflow-style: none; }
         p.second >u {color: aliceblue;}
         p.second{
+			
+                right: -10px;
+                position: absolute;
+                font-size: 23px;
+                line-height: 23px;
+                width: 97%;
+                height: 10%;
+                top: 84%;
             display: block;
-            position: relative;
-            clear: none;
+                        clear: none;
             float: left;
-            width: 17%;
+                     
            
-            top: 418px;
             z-index: 14;
             /* border-width: 1px; */
             /* border-style: solid; */
@@ -91,9 +92,9 @@
             margin: 10px;
             box-shadow: 4px 0px 2px -2px rgba(0, 0, 0, 0.7), 16px 0px 10px -10px rgba(0, 0, 0, 0.5);
             font-family: Verdana, Geneva, sans-serif;
-            font-size: 12px;
+            
             color: #1d1d1d;
-            line-height: 16px;
+          
             /* font-weight: bold; */
             font-variant: normal;
             text-align: justify;
@@ -101,12 +102,12 @@
             padding: 12px 15px 26px 15px;
             background-color: rgb(7, 200, 210);
         }
-        .main{
-            position: absolute;
-            width: 65%;
-            right: 78px;
-            height: 80%;
-            top: 126px;
+        .main{     width: 100%;
+    left: 0px;
+               
+                top: 20%;
+            position: absolute;   
+                height: 70%;
             background-color: rgba(224, 129, 24, 0.95);
             /*	background-color:#0066FF;*/
 
@@ -119,8 +120,8 @@
             min-height: 300px;
             overflow: hidden;
         }
-        .menu{
-            padding-left: 150px;
+        .menu{ padding-left: 0px;
+                text-align: center;            
             border-top: 22px solid #07c8d2;
             padding-bottom: 10px;
             font-size: 14px;
@@ -129,36 +130,24 @@
         }
 
 
-
-        /*.menu:after{
-            vertical-align:top;
-            content:">";
-            padding-left: 50px;
-
-            color:rgba(255,255,255,0.7);
-            font-style: normal;
-            text-shadow: 13px -13px 3px rgba(11,11,11,0.7);
-        }.menu:before{
-            vertical-align:top;
-            content:"<";
-            padding-right: 50px;
-            font-size: 14px;
-            font-family: Tahoma, Geneva, sans-serif;
-            color:rgba(11,11,11,0.7);
-            font-style: normal;
-            text-shadow: -13px -13px 3px rgba(255,255,255,1);
-        }*/
-        a {
+        a {font-size: 35px;
             padding: 10px;
             margin: 1px;
-            font-size: 19px;
+            
             color: rgb(88,161,237);
             text-decoration: none;
         }
         .lr{
-            margin-right: 30px;
+			height: 68px;
+    position: fixed;
+    margin-right: 30px;
+    overflow: hidden;
+    bottom: 0px;
 
         }
+		.rl{ height: 75%;    padding-bottom: 20px;
+			overflow: auto;
+		}
         a.mainmenu:hover{
             background-color: #4294EB;
             color: rgb(255, 255, 255);    /* text-decoration: underline; */
@@ -203,57 +192,7 @@ cursor: pointer;
             color: rgba(224, 129, 24, 0.95);
             background-color: #565656;
         }
-        @media screen and (max-width: 1400px)  and (min-width: 1271px) { /*note book*/
-
-            .left{
-                background-size: 1120px;
-                width: 80%;
-            }
-        }
-        @media screen and (max-width: 1270px)  {
-
-            .left{
-                background-size: 1000px;
-                width: 70%;
-            }
-        }
-        @media screen and (max-width: 1200px)  {
-            .main{
-                width: 73%;
-                right: 0px;
-            }
-            .left{
-                background-size: 920px;
-
-            }
-        }
-        @media screen and (max-width: 1150px)  {
-            .menu{
-                padding-left: 100px;}
-        }
-        @media screen and (max-width: 1040px)  {
-            .menu{
-                padding-left: 40px;}
-        }
-        @media screen and (max-width: 1025px)  {
-            .menu{
-                padding-left: 40px;}
-            .main {
-                width: 65%;
-                left: 40px;
-            }
-            .left {
-                background-size: 1000px;
-                width: 90%;}
-            p.second{
-                right: 24px;
-                position: absolute;
-                top: 140px;
-            }
-            footer{
-                height: 60px;
-            }
-        }
+        
 
         form{
             width: 100%;    height: 100%;
@@ -271,39 +210,7 @@ cursor: pointer;
         td{line-height:40px;
             height: 50px;}
 
-        @media screen and (max-width:700px){
-            .ashow{
-                width: 90%;
-                min-height: 0px;
-                padding-left: 10px;
-            }
-            .menu{
-                padding-left: 0px;
-                text-align: center;
-            }
-            .main {
-                width: 90%;
-                left: 40px;
-                top: 171px;}
-            a{
-                font-size: 35px;
-            }
-            .lr {
-
-                height: 6%;
-            }
-            h3{ font-size: 31px;}
-            p.second {
-                right: -10px;
-                position: absolute;
-                font-size: 23px;
-                line-height: 23px;
-                width: 97%;
-                height: 10%;
-                top: 84%;
-            }
-
-        }
+     
 
         .info{    display: block;
             width: 87px;
@@ -317,7 +224,10 @@ cursor: pointer;
     width: 200px;
     height: 100px;
     z-index: 15;
-    left: 272px;}
+    left: 272px;}  
+            
+        
+          svg {width: 100%; }
     </style>
 	<base href="http://<?=$_SERVER['HTTP_HOST']?>">
 </head>
@@ -325,9 +235,9 @@ cursor: pointer;
 <body><div class="left">
     <div id='image' style="
     position: absolute;
-    left: 0px;
-    top: -95px;"><a href="/">
-        <svg width="780" height="250" xmlns="http://www.w3.org/2000/svg">
+    left: 0px; width:100%; height:100%;
+    top: -95px;">
+        <svg height="100%" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
             <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
             <g>
                 <title>Color</title>
@@ -340,10 +250,10 @@ cursor: pointer;
                 <title>Img</title>
                 <rect stroke="#ffffff" transform="matrix(0.8600063194261484,-0.557589807979089,0.6187867184645679,0.7749532176442265,-48.18030653878154,84.21243808038263) " id="svg_1" height="84" width="101" y="118.699587" x="17.878837" stroke-width="2.5" fill="none"/>
                 <rect stroke="#187ae2" transform="matrix(0.8600063194261484,-0.557589807979089,0.6187867184645679,0.7749532176442265,-36.91179527321968,125.25765595624068) " id="svg_3" height="84" width="101" y="123.699587" x="89.878837" stroke-width="1.5" fill="none"/>
-                <text stroke="#33666C" transform="matrix(1.0594847202301025,0,0,0.9547035579169574,-2.7647417569542085,2.0797173268606386) " xml:space="preserve" text-anchor="start" font-family="'Trebuchet MS', Gadget, sans-serif" font-size="63" id="svg_4" y="192.536516" x="248.994634" stroke-width="0" fill="#08e280">Поділись своїм</text>
+                <text stroke="#33666C" transform="matrix(1.0594847202301025,0,0,0.9547035579169574,-2.7647417569542085,2.0797173268606386) " xml:space="preserve" text-anchor="start" font-family="'Trebuchet MS', Gadget, sans-serif" font-size="43" id="svg_4" y="192.536516" x="248.994634" stroke-width="0" fill="#08e280">Поділись своїм</text>
                 <rect stroke="#e28018" transform="matrix(0.8571411439467397,-0.5611606716547405,0.6227494935804712,0.7723714029450454,-42.848632309688554,105.35030568451526) " id="svg_5" height="36.544141" width="45" y="145.030382" x="81.183293" stroke-width="11.5" fill="#e28018"/>
             </g>
-        </svg></a>
+        </svg>
     </div></div>
 <!--<div class="rightback"></div>-->
 <div class="main">
@@ -364,11 +274,12 @@ cursor: pointer;
 
 
 </div>
-    <div class="ashow lr">
+    <div id="pb" class="ashow lr">
         <h2 class="l">Ваши секреты</h2>
-        <?=$issues;?></div>
+        <?=$issues;?>
+        </div>
 
-    <div class="ashow rl">
+    <div id="sc" class="ashow rl">
         <h2 class="l" >Ваши Проблемы</h2>
         <?=$problems;?>
         <a href="#" class="go" >previous</a>
@@ -376,7 +287,7 @@ cursor: pointer;
         <a href="#"  class="go">next</a><br />
         Проблема<br /><input type="button" value="кнопка перехода"  /></div>
 </div>
-<p class="second"><br /> Очень часто возникает желание <u>поделиться</u> чем либо, отпустить груз, лишь бы  человек <u>выслушал тебя</u>,  расказать о своих проблемах, о том что не дает покоя, и всегда возникает одно большое <span class="but">НО</span>. Говоря о проблемах ты можешь скомпроментировать себя, испортить себе репутацию и много других трудностей происходят при попытке поделиться со знакомым человеком. Поэтому не секрет, что <u>незнакомому все это легче сказать</u>. Однако не всегда он оказывается рядом в нужный момент, <u>мы с вами всегда</u> <span class="but">"Поділись своїм"</span>  </p>
+<!--<p class="second"><br /> Очень часто возникает желание <u>поделиться</u> чем либо, отпустить груз, лишь бы  человек <u>выслушал тебя</u>,  расказать о своих проблемах, о том что не дает покоя, и всегда возникает одно большое <span class="but">НО</span>. Говоря о проблемах ты можешь скомпроментировать себя, испортить себе репутацию и много других трудностей происходят при попытке поделиться со знакомым человеком. Поэтому не секрет, что <u>незнакомому все это легче сказать</u>. Однако не всегда он оказывается рядом в нужный момент, <u>мы с вами всегда</u> <span class="but">"Поділись своїм"</span>  </p>-->
 <div style="clear:both; z-index:7; position:relative; color:rgba(0,0,0,1); position:absolute; bottom:10px; text-align:center; width:80%">Copyright</div>
 <footer > </footer>
 <div id="menu" style="display: none" >
@@ -446,6 +357,18 @@ $('#search').toggle('slow','swing');
 		});
 
     });
+	$('#pb>h2.l').click(function(){
+		$('#sc').removeClass('rl');
+		$('#sc').addClass('lr');
+		$('#pb').removeClass('lr');
+		$('#pb').addClass('rl');
+	});
+	$('#sc>h2.l').click(function(){
+		$('#pb').removeClass('rl');
+		$('#pb').addClass('lr');
+		$('#sc').removeClass('lr');
+		$('#sc').addClass('rl');
+	})
 
 </script>
 </body>
