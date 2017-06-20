@@ -86,6 +86,66 @@ $qlimit=$limit?'limit 0,5':'';
 //sqlite_exec($dbhandle,$query);
     // sqlite_close($dbhandle);
 }
+xdebug_start_function_monitor( [ 'detect', 'array_push' ] );
+function detect(){
+	
+	 echo xdebug_memory_usage();echo "<br>";echo xdebug_peak_memory_usage();
+	require_once 'libs/mbdetect/Mobile_Detect.php';
+$detect = new Mobile_Detect;
+ 
+// Any mobile device (phones or tablets).
+if ( $detect->isMobile() ) {
+ return true;
+}
+  var_dump($detect->isMobile());
+// Any tablet device.
+if( $detect->isTablet() ){
+  return true;
+}
+ 
+// Exclude tablets.
+if( $detect->isMobile() && !$detect->isTablet() ){
+ 
+}
+ 
+// Check for a specific platform with the help of the magic methods:
+if( $detect->isiOS() ){
+ 
+}
+ 
+if( $detect->isAndroidOS() ){
+ 
+}
+ 
+// Alternative method is() for checking specific properties.
+// WARNING: this method is in BETA, some keyword properties will change in the future.
+echo $detect->is('Chrome');
+echo $detect->is('iOS');
+echo $detect->is('UC Browser');
+// [...]
+ 
+// Batch mode using setUserAgent():
+$userAgents = array(
+'Mozilla/5.0 (Linux; Android 4.0.4; Desire HD Build/IMM76D) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19',
+'BlackBerry7100i/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/103',
+// [...]
+);
+foreach($userAgents as $userAgent){
+ 
+  $detect->setUserAgent($userAgent);
+  $isMobile = $detect->isMobile();
+  $isTablet = $detect->isTablet();
+  // Use the force however you want.
+ 
+}
+ 
+// Get the version() of components.
+// WARNING: this method is in BETA, some keyword properties will change in the future.
+$detect->version('iPad'); // 4.3 (float)
+$detect->version('iPhone'); // 3.1 (float)
+$detect->version('Android'); // 2.1 (float)
+$detect->version('Opera Mini'); // 5.0 (float)
+}
 
 
 ?>

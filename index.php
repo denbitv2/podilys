@@ -1,6 +1,7 @@
-<?php include 'engine.php';
-//var_dump($_GET); die;
+<?php xdebug_start_code_coverage();
+ include 'engine.php';
 
+$tpl=detect()?'tplmbl.html':'tpl.html';
 $action=$_GET['action'];
 switch ($action){
     case 'find':
@@ -32,6 +33,6 @@ switch ($action){
 }
 
 
-include_once 'tpl.html';
+include_once $tpl;
 
 ?>

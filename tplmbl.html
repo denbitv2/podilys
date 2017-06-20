@@ -8,29 +8,57 @@
     <style>
 
         body{background-color: rgba(29,29,29,1.00); font-family: "Verdana", "New York", serif;}
+		
         .left{
-            z-index: 10;
-            background-color: rgba(29,29,29,1.00);
-            width: 100%;
-            top: 0px;
-            left: 0px;
-            position: absolute;
-            height: 100%;
-            background-image: url(imgs/s_mini.jpg);
-            background-origin: border-box;
-            background-size: 100%;
-            background-position: -50px 0px;
-            background-repeat: no-repeat;	/*background-color:rgba(168,98,179,1);*/
+    background-color: rgba(29,29,29,1.00);
+    width: 100%;
+    height: 200px;
+    background-image: url(imgs/s_mini.jpg);
+    background-origin: border-box;
+    background-size: 100%;
+    background-position: 140px 0px;
+    background-repeat: no-repeat;	/*background-color:rgba(168,98,179,1);*/
         }
-        .rightback{
-            position: absolute;
-            z-index: 10;
-            background-color: rgba(29,29,29,1.00);
-            top: 0px;
-            right: 0px;
-            width: 440px;
-            height: 100%;
+		
+	.main{
+		width: 100%;
+    left: 0px;
+    top: 20%;
+     height: 20%;
+    background-color: rgba(224, 129, 24, 0.95);
+     padding-right: 0px;
+    margin-right: 56px;
+    clear: none;
+    float: left;
+ 
+    min-height: 10%;   
         }
+		
+     .menu{ 
+	padding-left: 0px;
+    text-align: center;            
+    border-top: 22px solid #07c8d2;
+    padding-bottom: 10px;
+    font-size: 14px;
+    font-family: Tahoma, Geneva, sans-serif;
+    background-color: rgb(63, 77, 64);
+        }	
+		
+		
+		 .ashow{
+	z-index: 58;
+	/*position: relative;*/
+	clear: none;
+	float: left;
+	width: 100%;
+	z-index: 58;
+	background-color: rgba(224,129,24,0.95);
+        }
+		
+		
+        .ashow::-webkit-scrollbar{width: 0px;
+        }
+        .ashow { -ms-overflow-style: none; }
 
         h1{ visibility:hidden;
             text-align: right;
@@ -59,16 +87,7 @@
 
         }
 		 
-        .ashow{
-            position: relative;   
-            clear: none;
-            float: left; 
-			width: 100%;
-            
-        }
-        .ashow::-webkit-scrollbar{width: 0px;
-        }
-        .ashow { -ms-overflow-style: none; }
+       
         p.second >u {color: aliceblue;}
         p.second{
 			
@@ -102,32 +121,7 @@
             padding: 12px 15px 26px 15px;
             background-color: rgb(7, 200, 210);
         }
-        .main{     width: 100%;
-    left: 0px;
-               
-                top: 20%;
-            position: absolute;   
-                height: 70%;
-            background-color: rgba(224, 129, 24, 0.95);
-            /*	background-color:#0066FF;*/
-
-            z-index: 58;
-            padding-right: 0px;
-            margin-right: 56px;
-            clear: none;
-            float: left;
-            margin-bottom: 19px;
-            min-height: 300px;
-            overflow: hidden;
-        }
-        .menu{ padding-left: 0px;
-                text-align: center;            
-            border-top: 22px solid #07c8d2;
-            padding-bottom: 10px;
-            font-size: 14px;
-            font-family: Tahoma, Geneva, sans-serif;
-            background-color: rgb(63, 77, 64);
-        }
+        
 
 
         a {font-size: 35px;
@@ -145,7 +139,7 @@
     bottom: 0px;
 
         }
-		.rl{ height: 75%;    padding-bottom: 20px;
+		.rl{ height: 75%;  min-height: 550px;      padding-bottom: 68px;
 			overflow: auto;
 		}
         a.mainmenu:hover{
@@ -174,8 +168,8 @@
             color:#FFFFFF;
             letter-spacing:2px;
         }
-        footer{
-            background-color: rgba(68,68,68,1.00); position: fixed; bottom: 0px; left: 0px; width: 100%; height: 170px; z-index: 13;
+        footer{    height: 80px;
+            background-color: rgba(68,68,68,1.00); position: fixed; bottom: 0px; left: 0px; width: 100%;
         }
 
         span.popmenu{
@@ -226,18 +220,20 @@ cursor: pointer;
     z-index: 15;
     left: 272px;}  
             
-        
-          svg {width: 100%; }
+		svg{position: absolute;
+    left: -30px;
+    /* width: 100%; */
+    height: 250px;
+    top: -70px;
+		}
+         
     </style>
 	<base href="http://<?=$_SERVER['HTTP_HOST']?>">
 </head>
 
 <body><div class="left">
-    <div id='image' style="
-    position: absolute;
-    left: 0px; width:100%; height:100%;
-    top: -95px;">
-        <svg height="100%" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    
+        <svg height="250" width="100%" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
             <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
             <g>
                 <title>Color</title>
@@ -254,7 +250,7 @@ cursor: pointer;
                 <rect stroke="#e28018" transform="matrix(0.8571411439467397,-0.5611606716547405,0.6227494935804712,0.7723714029450454,-42.848632309688554,105.35030568451526) " id="svg_5" height="36.544141" width="45" y="145.030382" x="81.183293" stroke-width="11.5" fill="#e28018"/>
             </g>
         </svg>
-    </div></div>
+    </div>
 <!--<div class="rightback"></div>-->
 <div class="main">
 
@@ -274,6 +270,7 @@ cursor: pointer;
 
 
 </div>
+   </div>
     <div id="pb" class="ashow lr">
         <h2 class="l">Ваши секреты</h2>
         <?=$issues;?>
@@ -282,11 +279,8 @@ cursor: pointer;
     <div id="sc" class="ashow rl">
         <h2 class="l" >Ваши Проблемы</h2>
         <?=$problems;?>
-        <a href="#" class="go" >previous</a>
-        <br />Запис 2<br /><br /><br />
-        <a href="#"  class="go">next</a><br />
-        Проблема<br /><input type="button" value="кнопка перехода"  /></div>
-</div>
+        </div>
+
 <!--<p class="second"><br /> Очень часто возникает желание <u>поделиться</u> чем либо, отпустить груз, лишь бы  человек <u>выслушал тебя</u>,  расказать о своих проблемах, о том что не дает покоя, и всегда возникает одно большое <span class="but">НО</span>. Говоря о проблемах ты можешь скомпроментировать себя, испортить себе репутацию и много других трудностей происходят при попытке поделиться со знакомым человеком. Поэтому не секрет, что <u>незнакомому все это легче сказать</u>. Однако не всегда он оказывается рядом в нужный момент, <u>мы с вами всегда</u> <span class="but">"Поділись своїм"</span>  </p>-->
 <div style="clear:both; z-index:7; position:relative; color:rgba(0,0,0,1); position:absolute; bottom:10px; text-align:center; width:80%">Copyright</div>
 <footer > </footer>
