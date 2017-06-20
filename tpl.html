@@ -159,6 +159,10 @@
             margin-right: 30px;
 
         }
+		a.mainmenu{
+			cursor: pointer;
+			
+		}
         a.mainmenu:hover{
             background-color: #4294EB;
             color: rgb(255, 255, 255);    /* text-decoration: underline; */
@@ -188,7 +192,16 @@
         footer{
             background-color: rgba(68,68,68,1.00); position: fixed; bottom: 0px; left: 0px; width: 100%; height: 170px; z-index: 13;
         }
-
+		#close{
+			
+    color: white;
+    position: absolute;
+    top: 10px;
+    cursor: pointer;
+    right: 10px;
+    padding: 10px;
+    background-color: rgba(8, 182, 210, 1);
+		}
         span.popmenu{
 
             padding: 5px;
@@ -309,15 +322,21 @@ cursor: pointer;
             width: 87px;
             height: 55px;
             line-height: 55px;}
+		
+		
 			#search{ 
 			display:none;
-			padding:10px;  position: absolute;
-    top: 56px;
-    background-color: white;
+			    padding: 10px;
+    position: absolute;
+    top: 55px;
+    background-color: #444444;
     width: 200px;
     height: 100px;
     z-index: 15;
-    left: 272px;}
+    left: 272px;
+    border-radius: 0px 10px;
+		    color: rgb(88,161,237);
+    padding: 15px;}
     </style>
 	<base href="http://<?=$_SERVER['HTTP_HOST']?>">
 </head>
@@ -348,28 +367,28 @@ cursor: pointer;
 <!--<div class="rightback"></div>-->
 <div class="main">
 
-    <div class="menu"><a href="#add" class="mainmenu" id='add' >Поділитися</a>|<a href="#" id='look' class="mainmenu">Знайти запис</a>|<a href="?action=all"  class="mainmenu">Відобразити усі записи</a>|<a href="#" >Кролик:D</a>
+    <div class="menu"><a  class="mainmenu" id='add' >Поділитися</a>|<a  id='look' class="mainmenu">Знайти запис</a>|<a href="?action=all"  class="mainmenu">Відобразити усі записи</a>|<a href="#" >Кролик:D</a>
 	<div id='search'>
 	<form method=get >
 	<input type=hidden name=action value='find'>
-	<select name='where' required>
-<option  selected>Choose</option>
-<option value='secrets' >secrets</option>
-<option value='problems' >problems</option>
-</select>
-<input type=text required length=20 name=what>
-<input type=submit  value='search'>
+	Де шукати? <select name='where' required>
+<option  selected>Оберіть</option>
+<option value='secrets' >Знайти секрет</option>
+<option value='problems' >Знайти проблему</option>
+</select><br>
+Що шукати? <input type=text required length=20 name=what>
+<input type=submit  value='Шукати'>
 </form>
 </div>
 
 
 </div>
     <div class="ashow lr">
-        <h2 class="l">Ваши секреты</h2>
+        <h2 class="l">Ваші секрети</h2>
         <?=$issues;?></div>
 
     <div class="ashow rl">
-        <h2 class="l" >Ваши Проблемы</h2>
+        <h2 class="l" >Ваші Проблеми</h2>
         <?=$problems;?>
        </div>
 </div>
@@ -383,7 +402,7 @@ cursor: pointer;
     <form action='?action=add'  id=secret method=post><table >
 
             <input type='hidden' value='secrets' name='subject'>
-            <tr><td class="info">Секрет...</td><td><input type=text class=add name=topic></td></tr>
+            <tr><td class="info">Секрет</td><td><input type=text class=add name=topic></td></tr>
             <tr><td class="info">Зміст</td><td><textarea name=content></textarea></td></tr>
             <tr><td></td><td><input   type='submit' value='Post'></td></tr>
 
@@ -391,7 +410,7 @@ cursor: pointer;
     <table >
 
             <input type='hidden' value='problems' name='subject'>
-            <tr><td class="info">Проблема...</td><td><input type=text class=add name=topic></td></tr>
+            <tr><td class="info">Проблема</td><td><input type=text class=add name=topic></td></tr>
             <tr><td class="info">Зміст</td><td><textarea name=content></textarea></td></tr>
             <tr><td></td><td><input   type='submit' value='Post'></td></tr>
 
@@ -418,7 +437,7 @@ $('#search').toggle('slow','swing');
         $('#menu').html('');
 		txt3.appendChild(close);
         txt3.appendChild(inner);
-        txt3.style='position:absolute; width:100%; height:100%; background-color:rgba(1, 11, 76, 0.43);left: 0px; z-index: 1000;'
+        txt3.style='position:absolute;     top: 0px; width:100%; height:100%; background-color:rgba(1, 11, 76, 0.43);left: 0px; z-index: 1000;'
 
         $('body').append(txt3);
         $('input[name=sent]').click(function(){
