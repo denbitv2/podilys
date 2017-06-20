@@ -1,4 +1,4 @@
-<?php xdebug_start_code_coverage();
+<?php 
  include 'engine.php';
 
 $tpl=detect()?'tplmbl.html':'tpl.html';

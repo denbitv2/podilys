@@ -77,13 +77,13 @@
             text-shadow: 0px 0px #4A4A4A;
 			width: 100%;
         }
-        h2.l{ border-top: 25px #4294eb  solid;}
+        h2.l{ border-top: 25px #4294eb  solid;    font-size: 30px;
+    text-transform: uppercase;}
         h3 {
             font-family: "Cuprum" !important;
-            text-indent: 10px;
-            
-            margin: 5px;
- font-size: 31px;
+                text-indent: 40px;
+    margin: 5px;
+    font-size: 40px;
 
         }
 		 
@@ -136,7 +136,7 @@
     position: fixed;
     margin-right: 30px;
     overflow: hidden;
-    bottom: 0px;
+      bottom: 3px;
 
         }
 		.rl{ height: 75%;  min-height: 550px;      padding-bottom: 68px;
@@ -149,20 +149,23 @@
         input[type=submit]{
             background-color:rgba(102,153,255,1);
             color:#FFFFFF;
-            border-radius:2px;
-            padding:3px;
+            border-radius:2px;           
             margin:10px;
+			font-size: 27px;
             border-color:rgba(102,0,180,0.5);
             border-style:solid;
             border-width:1px;
-            text-shadow:0px 1px 2px #000000;
+			 width: 200px;
+            
         }
-        input[type=submit]:active{
+		#bubble input[type=submit]{    padding: 25px;}
+        input[type=submit]:active{ 
             background-color:rgba(102,51,255,0.7);
         }
         textarea{width: 300px;
-            height: 100px;}
-        input[type=text].add{    width: 300px;}
+            height: 60%;}
+        input[type=text].add{     width: 301px;
+    height: 60%;}
         .but{
             font-size:20px;
             color:#FFFFFF;
@@ -177,7 +180,7 @@
             padding: 5px;
 cursor: pointer;
             font-family: Tahoma, Geneva, sans-serif;
-            font-size: 18px;
+            font-size: 45px;
         }
         .active{color: #08e280;
         background-color:#868484;
@@ -192,33 +195,40 @@ cursor: pointer;
             width: 100%;    height: 100%;
         }
         table{
-            width: 40%;
-            height: 150px;
-            /* position: relative; */
-            /* left: 10%; */
-            /* top: 30px; */
+           
+             position: relative; 
+                 height: 80%;
+    width: 80%;
             background-color: #a7a5a5;
-            padding: 15px;
+            padding:20px;
             margin-left: 10%;
         }
         td{line-height:40px;
-            height: 50px;}
+            height: 50px;
+		text-align: right;
+		    vertical-align: top;}
 
      
 
-        .info{    display: block;
-            width: 87px;
-            height: 55px;
-            line-height: 55px;}
+        .info{ display: block;
+    width: 87px;
+    height: 55px;
+    line-height: 80px;
+    font-size: 50px;}
+		
 			#search{ 
 			display:none;
-			padding:10px;  position: absolute;
-    top: 56px;
-    background-color: white;
-    width: 200px;
-    height: 100px;
+			    padding: 10px;
+    position: absolute;
+    top: 55px;
+    background-color: #444444;
+    width: 220px;
+    height:  240px;
     z-index: 15;
-    left: 272px;}  
+    left: 272px;
+    border-radius: 0px 10px;
+		    color: rgb(88,161,237);
+    padding: 15px;}
             
 		svg{position: absolute;
     left: -30px;
@@ -226,8 +236,34 @@ cursor: pointer;
     height: 250px;
     top: -70px;
 		}
-         
+		p.post{
+			font-size: 20px;
+    text-indent: 10px;
+    margin: 0px;
+    color: #e4e4e4;
+		}  
+		#search input{ height: 40px;
+    width: 200px;
+		margin: 10px;}
+		#search select{
+			height: 40px;
+    width: 200px;
+		margin: 10px;
+		}
+		
+		  label{font-size: 27px;}
+		#close{color: white;
+	position: absolute;
+	top: 10px;
+			font-size: 35px;
+	cursor: pointer;
+	right: 10px;
+	padding: 40px;
+	background-color: rgba(8, 182, 210, 1);
+			
+		}	
     </style>
+  
 	<base href="http://<?=$_SERVER['HTTP_HOST']?>">
 </head>
 
@@ -244,9 +280,9 @@ cursor: pointer;
             </g>
             <g>
                 <title>Img</title>
-                <rect stroke="#ffffff" transform="matrix(0.8600063194261484,-0.557589807979089,0.6187867184645679,0.7749532176442265,-48.18030653878154,84.21243808038263) " id="svg_1" height="84" width="101" y="118.699587" x="17.878837" stroke-width="2.5" fill="none"/>
-                <rect stroke="#187ae2" transform="matrix(0.8600063194261484,-0.557589807979089,0.6187867184645679,0.7749532176442265,-36.91179527321968,125.25765595624068) " id="svg_3" height="84" width="101" y="123.699587" x="89.878837" stroke-width="1.5" fill="none"/>
-                <text stroke="#33666C" transform="matrix(1.0594847202301025,0,0,0.9547035579169574,-2.7647417569542085,2.0797173268606386) " xml:space="preserve" text-anchor="start" font-family="'Trebuchet MS', Gadget, sans-serif" font-size="43" id="svg_4" y="192.536516" x="248.994634" stroke-width="0" fill="#08e280">Поділись своїм</text>
+                <rect stroke="#ffffff" transform="matrix(0.8600063194261484,-0.557589807979089,0.6187867184645679,0.7749532176442265,-48.18030653878154,84.21243808038263) " id="svg_1" height="84" width="101" y="118.699587" x="17.878837" stroke-width="5" fill="none"/>
+                <rect stroke="#187ae2" transform="matrix(0.8600063194261484,-0.557589807979089,0.6187867184645679,0.7749532176442265,-36.91179527321968,125.25765595624068) " id="svg_3" height="84" width="101" y="123.699587" x="89.878837" stroke-width="5" fill="none"/>
+                <text stroke="#33666C" transform="matrix(1.0594847202301025,0,0,0.9547035579169574,-2.7647417569542085,2.0797173268606386) " xml:space="preserve" text-anchor="start" font-family="'Trebuchet MS', Gadget, sans-serif" font-size="60" id="svg_4" y="192.536516" x="248.994634" stroke-width="0" fill="#08e280">Поділись своїм</text>
                 <rect stroke="#e28018" transform="matrix(0.8571411439467397,-0.5611606716547405,0.6227494935804712,0.7723714029450454,-42.848632309688554,105.35030568451526) " id="svg_5" height="36.544141" width="45" y="145.030382" x="81.183293" stroke-width="11.5" fill="#e28018"/>
             </g>
         </svg>
@@ -254,17 +290,17 @@ cursor: pointer;
 <!--<div class="rightback"></div>-->
 <div class="main">
 
-    <div class="menu"><a href="#add" class="mainmenu" id='add' >Поділитися</a>|<a href="#" id='look' class="mainmenu">Знайти запис</a>|<a href="?action=all"  class="mainmenu">Відобразити усі записи</a>|<a href="#" >Кролик:D</a>
+    <div class="menu"><a  class="mainmenu" id='add' >Поділитися</a>|<a  id='look' class="mainmenu">Знайти запис</a>|<a href="?action=all"  class="mainmenu">Відобразити усі записи</a>|<a href="#" >Кролик:D</a>
 	<div id='search'>
 	<form method=get >
 	<input type=hidden name=action value='find'>
-	<select name='where' required>
-<option  selected>Choose</option>
-<option value='secrets' >secrets</option>
-<option value='problems' >problems</option>
-</select>
-<input type=text required length=20 name=what>
-<input type=submit  value='search'>
+	<label for="where">Де шукати? </label><select name='where' required>
+<option  selected>Оберіть</option>
+<option value='secrets' >Знайти секрет</option>
+<option value='problems' >Знайти проблему</option>
+</select><br>
+<label for="what">Що шукати?</label><input type=text required length=20 name=what>
+<input type=submit  value='Шукати'>
 </form>
 </div>
 
@@ -272,17 +308,17 @@ cursor: pointer;
 </div>
    </div>
     <div id="pb" class="ashow lr">
-        <h2 class="l">Ваши секреты</h2>
+        <h2 class="l">Ваші секрети</h2>
         <?=$issues;?>
         </div>
 
     <div id="sc" class="ashow rl">
-        <h2 class="l" >Ваши Проблемы</h2>
+        <h2 class="l" >Ваші проблеми</h2>
         <?=$problems;?>
         </div>
 
 <!--<p class="second"><br /> Очень часто возникает желание <u>поделиться</u> чем либо, отпустить груз, лишь бы  человек <u>выслушал тебя</u>,  расказать о своих проблемах, о том что не дает покоя, и всегда возникает одно большое <span class="but">НО</span>. Говоря о проблемах ты можешь скомпроментировать себя, испортить себе репутацию и много других трудностей происходят при попытке поделиться со знакомым человеком. Поэтому не секрет, что <u>незнакомому все это легче сказать</u>. Однако не всегда он оказывается рядом в нужный момент, <u>мы с вами всегда</u> <span class="but">"Поділись своїм"</span>  </p>-->
-<div style="clear:both; z-index:7; position:relative; color:rgba(0,0,0,1); position:absolute; bottom:10px; text-align:center; width:80%">Copyright</div>
+
 <footer > </footer>
 <div id="menu" style="display: none" >
 
@@ -291,17 +327,17 @@ cursor: pointer;
     <form action='?action=add'  id=secret method=post><table >
 
             <input type='hidden' value='secrets' name='subject'>
-            <tr><td class="info">Секрет...</td><td><input type=text class=add name=topic></td></tr>
+            <tr><td class="info">Секрет</td><td><input type=text class=add name=topic></td></tr>
             <tr><td class="info">Зміст</td><td><textarea name=content></textarea></td></tr>
-            <tr><td></td><td><input   type='submit' value='Post'></td></tr>
+            <tr><td></td><td><input   type='submit' value='Звільнитись'></td></tr>
 
     </table></form> <form action='?action=add'  id=problems style='display:none' method=post>
     <table >
 
             <input type='hidden' value='problems' name='subject'>
-            <tr><td class="info">Проблема...</td><td><input type=text class=add name=topic></td></tr>
+            <tr><td class="info">Проблема</td><td><input type=text class=add name=topic></td></tr>
             <tr><td class="info">Зміст</td><td><textarea name=content></textarea></td></tr>
-            <tr><td></td><td><input   type='submit' value='Post'></td></tr>
+            <tr><td></td><td><input   type='submit' value='Звільнитись!'></td></tr>
 
     </table></form>
 </div>
@@ -311,13 +347,14 @@ cursor: pointer;
         crossorigin="anonymous"></script>
 <script>
 $('#look').click(function(){
+	$('#search').css('top',$('#look').position().top+$('#look').height());
 $('#search').toggle('slow','swing');
 });
     $('#add').click(function () {
         var txt3 = document.createElement("div");				  // Create with DOM
         txt3.setAttribute('id','bubble');
         var inner=document.createElement("div");
-        inner.style='position:absolute; width:30%; height:40%; left:25%; top:25%; background-color: #b5bbbb;';
+        inner.style='position: absolute;width: 80%;height: 55%;left: 10%;top: 10%;background-color: rgb(181, 187,187);';
 		
         inner.innerHTML =  $('#menu').html();
 		close=document.createElement('span');
@@ -326,7 +363,7 @@ $('#search').toggle('slow','swing');
         $('#menu').html('');
 		txt3.appendChild(close);
         txt3.appendChild(inner);
-        txt3.style='position:absolute; width:100%; height:100%; background-color:rgba(1, 11, 76, 0.43);left: 0px; z-index: 1000;'
+        txt3.style='position:absolute; width:100%; top: 0px; height:100%; background-color:rgba(1, 11, 76, 0.43);left: 0px; z-index: 1000;'
 
         $('body').append(txt3);
         $('input[name=sent]').click(function(){

@@ -69,7 +69,7 @@ $qlimit=$limit?'limit 0,5':'';
     $result=$x->fetchAll();
     $generate='';
     foreach ($result as $key){
-        $generate.="<h3>{$key['name']}</h3><p style='font-size:10px;'>{$key['content']}</p>";
+        $generate.="<h3>{$key['name']}</h3><p class='post'>{$key['content']}</p>";
     }
     $problems=$generate;
 	 $query  = "select name,content from secrets ORDER  by id desc $qlimit";
@@ -78,7 +78,7 @@ $qlimit=$limit?'limit 0,5':'';
     $result=$x->fetchAll();
     $generate='';
     foreach ($result as $key){
-        $generate.="<h3>{$key['name']}</h3><p style='font-size:10px;'>{$key['content']}</p>";
+        $generate.="<h3>{$key['name']}</h3><p class='post'>{$key['content']}</p>";
     }
     $issues=$generate;
     }
@@ -89,7 +89,7 @@ $qlimit=$limit?'limit 0,5':'';
 xdebug_start_function_monitor( [ 'detect', 'array_push' ] );
 function detect(){
 	
-	 echo xdebug_memory_usage();echo "<br>";echo xdebug_peak_memory_usage();
+
 	require_once 'libs/mbdetect/Mobile_Detect.php';
 $detect = new Mobile_Detect;
  
@@ -97,7 +97,7 @@ $detect = new Mobile_Detect;
 if ( $detect->isMobile() ) {
  return true;
 }
-  var_dump($detect->isMobile());
+  
 // Any tablet device.
 if( $detect->isTablet() ){
   return true;
