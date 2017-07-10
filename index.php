@@ -29,9 +29,20 @@ switch ($action){
         show();
         break;
 	
-    default:show();
-}
+    default:
+       $edit_rec= $_SERVER['REQUEST_URI'];
+       $edit_rec=ltrim($edit_rec,"/");
+       $edit=explode("/",$edit_rec);
+        if ($edit[0] == "edit") {
+            edit(substr($edit[1],1),$_COOKIE[author],substr($edit[1],0,1)=="s"?"secrets":"problems",$_POST['content'],$_POST['name']);
+            show();
+        } else {
+            show();
+        }
 
+
+}
+log_visits();
 
 include_once $tpl;
 

@@ -15,7 +15,8 @@
             color: #5d5d5d;
             text-decoration: underline;
             text-decoration-style: dotted;
-            padding-left: 40px;
+            padding-left: 15px;
+            display: table-cell;
         }
         .left{
             z-index: 10;
@@ -58,7 +59,7 @@
             text-shadow: 0px 0px #4A4A4A;
         }
         h2.l{ border-top: 25px #4294eb  solid;}
-        h3 {
+        h3 { display: inline-block;
             font-family: "Cuprum" !important;
             text-indent: 10px;
             font-size: 20px;
@@ -399,11 +400,11 @@ cursor: pointer;
 
 </div>
     <div class="ashow lr">
-        <h2 class="l">Ваші секрети</h2>
+        <h2 class="l" id="secrets">Ваші секрети</h2>
         <?=$issues;?></div>
 
     <div class="ashow rl">
-        <h2 class="l" >Ваші Проблеми</h2>
+        <h2 class="l"  id="problems">Ваші Проблеми</h2>
         <?=$problems;?>
        </div>
 </div>
@@ -425,7 +426,7 @@ cursor: pointer;
     <table >
 
             <input type='hidden' value='problems' name='subject'>
-            <tr><td class="info">Проблема</td><td><input type=text class=add name=topic></td></tr>
+            <tr><td class="info">Проблема</td><td><input type=text class=add name=topic ></td></tr>
             <tr><td class="info">Зміст</td><td><textarea name=content></textarea></td></tr>
             <tr><td></td><td><input   type='submit' value='Post'></td></tr>
 
@@ -436,6 +437,14 @@ cursor: pointer;
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
 <script>
+    function edit(e) {
+        var parent=$(e).parent().prevAll('h2');
+        var content=$(e).nextAll('p').text();
+        var el=$(e).prevAll('h3');
+        var id=el.attr('data-id');
+
+
+    }
 $('#look').click(function(){
 $('#search').toggle('slow','swing');
 });

@@ -89,8 +89,8 @@ function show($limit = true)
         $generate = '';
         $edited = '';
         foreach ($result as $key) {
-            if ($key['author'] == $_COOKIE['author']) {
-                $edited = ' You can Edit.';
+            if ((!empty($_COOKIE['author']))&&($key['author'] == $_COOKIE['author'])) {
+                $edited = "<a data-href='/edit/p{$key['id']}' >Редагувати</a>";
             } else {
                 $edited = '';
             }
@@ -104,8 +104,13 @@ function show($limit = true)
         $result = $x->fetchAll();
         $generate = '';
         foreach ($result as $key) {
+            if ((!empty($_COOKIE['author']))&&($key['author'] == $_COOKIE['author'])) {
+                $edited = "<a onclick='edit(this)' data-href='/edit/s{$key['id']}' >Редагувати</a>";
+            } else {
+                $edited = '';
+            }
             $d = ($key[date])?date_create("@" . $key['date'])->format("d F Y H:i:s "):"deprecated";
-            $generate .= "<h3 data-id='{$key['id']}'>{$key['name']}</h3> <span class='date'>{$d}</span><p class='post'>{$key['content']}</p>";
+            $generate .= "<div ><h3 data-id='{$key['id']}'>{$key['name']}</h3> {$edited} <span class='date' >{$d}</span><p class='post'>{$key['content']}</p></div>";
         }
         $issues = $generate;
     }
@@ -117,9 +122,22 @@ function show($limit = true)
 function edit($id,$author,$section,$content,$name)
 {
     $dbhandle = new PDO(DB);
-    $q="UPDATE $section  SET `name`='{$name}',`content`={$content} WHERE `id`='{$id}' and `author`='{$author}'";
-    $dbhandle->query($q);
-    print_r($dbhandle->errorInfo());
+    //check if author
+    $authorq = "SELECT author FROM $section where `id`=$id";
+    $write_protection=$dbhandle->query($authorq)->fetch();
+
+    if ($write_protection['author'] == $author ) {
+
+        if(isset($content,$name)){
+            $q="UPDATE $section  SET `name`='{$name}',`content`={$content} WHERE `id`='{$id}' and `author`='{$author}'";
+            $dbhandle->query($q);
+            print_r($dbhandle->errorInfo());
+        }
+    } else {
+        return "Error ";
+
+    }
+
 
 }
 
@@ -184,5 +202,18 @@ function detect()
     $detect->version('Opera Mini'); // 5.0 (float)
 }
 
+ function log_visits(){
+     $ip = getenv('HTTP_CLIENT_IP') ?:
+         getenv('HTTP_X_FORWARDED_FOR') ?:
+             getenv('HTTP_X_FORWARDED') ?:
+                 getenv('HTTP_FORWARDED_FOR') ?:
+                     getenv('HTTP_FORWARDED') ?:
+                         getenv('REMOTE_ADDR');
+     $mkt = time();
+     $vistilog=fopen("visits",'a');
+     fwrite($vistilog,"$ip-$mkt-{$_SERVER['HTTP_USER_AGENT']}\n");
+     fclose($vistilog);
+
+ }
 
 ?>
