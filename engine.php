@@ -90,12 +90,12 @@ function show($limit = true)
         $edited = '';
         foreach ($result as $key) {
             if ((!empty($_COOKIE['author']))&&($key['author'] == $_COOKIE['author'])) {
-                $edited = "<a data-href='/edit/p{$key['id']}' >Редагувати</a>";
+                $edited = "<a onclick='edit(this)'  data-href='/edit/p{$key['id']}' >Редагувати</a>";
             } else {
                 $edited = '';
             }
             $d = ($key[date])?date_create("@" . $key['date'])->format("d F Y H:i:s "):"deprecated";
-            $generate .= "<h3 data-id='{$key['id']}'>{$key['name']}{$edited}</h3><span class='date'>{$d}</span><p class='post'>{$key['content']} </p>";
+            $generate .= "<h3 data-id='{$key['id']}'>{$key['name']}</h3>{$edited}<span class='date'>{$d}</span><p class='post'>{$key['content']} </p>";
         }
         $problems = $generate;
         $query = "select id,name,content,author,date from secrets ORDER  by id desc $qlimit";
@@ -129,7 +129,14 @@ function edit($id,$author,$section,$content,$name)
     if ($write_protection['author'] == $author ) {
 
         if(isset($content,$name)){
-            $q="UPDATE $section  SET `name`='{$name}',`content`={$content} WHERE `id`='{$id}' and `author`='{$author}'";
+            $ip = getenv('HTTP_CLIENT_IP') ?:
+                getenv('HTTP_X_FORWARDED_FOR') ?:
+                    getenv('HTTP_X_FORWARDED') ?:
+                        getenv('HTTP_FORWARDED_FOR') ?:
+                            getenv('HTTP_FORWARDED') ?:
+                                getenv('REMOTE_ADDR');
+            $mkt = time();
+            $q="UPDATE $section  SET `name`='{$name}',`content`='{$content}',`date`= '$mkt',`ip`='$ip' WHERE `id`='{$id}' and `author`='{$author}'";
             $dbhandle->query($q);
             print_r($dbhandle->errorInfo());
         }

@@ -35,6 +35,7 @@ switch ($action){
        $edit=explode("/",$edit_rec);
         if ($edit[0] == "edit") {
             edit(substr($edit[1],1),$_COOKIE[author],substr($edit[1],0,1)=="s"?"secrets":"problems",$_POST['content'],$_POST['name']);
+
             show();
         } else {
             show();

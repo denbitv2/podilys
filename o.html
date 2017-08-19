@@ -3,9 +3,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Поділись своїм</title>
-	<meta name="description" content="Поділитись усім">
-	<meta name="keywords" content="Podilys,podilia,share, поділитись, поділись, проблеми, проблема, секрет, секрети, тягар,депресія, не можу тримати язик за зубами">
+    <title>О Кролику!</title>
+    <meta name="description" content="Поділитись усім">
+    <meta name="keywords" content="Podilys,podilia,share, поділитись, поділись, проблеми, проблема, секрет, секрети, тягар,депресія, не можу тримати язик за зубами">
     <link rel='stylesheet' id='Cuprum-google-font-css'  href='https://fonts.googleapis.com/css?family=Cuprum%3Aregular%2Citalic%2C700%2C700italic&#038;subset=cyrillic%2Clatin%2Clatin-ext&#038;ver=4.7.5' type='text/css' media='all' />
     <style>
 
@@ -90,9 +90,8 @@
             position: relative;
             clear: none;
             float: left;
-            width: 17%;
-           
-            top: 418px;
+
+            top: 20px;
             z-index: 14;
             /* border-width: 1px; */
             /* border-style: solid; */
@@ -169,10 +168,10 @@
             margin-right: 30px;
 
         }
-		a.mainmenu{
-			cursor: pointer;
-			
-		}
+        a.mainmenu{
+            cursor: pointer;
+
+        }
         a.mainmenu:hover{
             background-color: #4294EB;
             color: rgb(255, 255, 255);    /* text-decoration: underline; */
@@ -202,25 +201,25 @@
         footer{
             background-color: rgba(68,68,68,1.00); position: fixed; bottom: 0px; left: 0px; width: 100%; height: 170px; z-index: 13;
         }
-		#close{
-			
-    color: white;
-    position: absolute;
-    top: 10px;
-    cursor: pointer;
-    right: 10px;
-    padding: 10px;
-    background-color: rgba(8, 182, 210, 1);
-		}
+        #close{
+
+            color: white;
+            position: absolute;
+            top: 10px;
+            cursor: pointer;
+            right: 10px;
+            padding: 10px;
+            background-color: rgba(8, 182, 210, 1);
+        }
         span.popmenu{
 
             padding: 5px;
-cursor: pointer;
+            cursor: pointer;
             font-family: Tahoma, Geneva, sans-serif;
             font-size: 18px;
         }
         .active{color: #08e280;
-        background-color:#868484;
+            background-color:#868484;
         }
         .nonactive{
             color: rgba(224, 129, 24, 0.95);
@@ -327,36 +326,36 @@ cursor: pointer;
             }
 
         }
-.edit{
-    font-size: 10px;
-}
+        .edit{
+            font-size: 10px;
+        }
         .info{    display: block;
             width: 87px;
             height: 55px;
             line-height: 55px;}
-		
-		
-			#search{ 
-			display:none;
-			    padding: 10px;
-    position: absolute;
-    top: 55px;
-    background-color: #444444;
-    width: 200px;
-    height: 100px;
-    z-index: 15;
-    left: 272px;
-    border-radius: 0px 10px;
-		    color: rgb(88,161,237);
-    padding: 15px;}
-		p.post{
-			font-size: 12px;
-    text-indent: 10px;
-    margin: 0px;
-    color: #e4e4e4;
-		}  
+
+
+        #search{
+            display:none;
+            padding: 10px;
+            position: absolute;
+            top: 55px;
+            background-color: #444444;
+            width: 200px;
+            height: 100px;
+            z-index: 15;
+            left: 272px;
+            border-radius: 0px 10px;
+            color: rgb(88,161,237);
+            padding: 15px;}
+        p.post{
+            font-size: 12px;
+            text-indent: 10px;
+            margin: 0px;
+            color: #e4e4e4;
+        }
     </style>
-	<base href="http://<?=$_SERVER['HTTP_HOST']?>">
+    <base href="http://podilys:81">
 </head>
 
 <body><div class="left">
@@ -386,145 +385,34 @@ cursor: pointer;
 <div class="main">
 
     <div class="menu"><a  class="mainmenu" id='add' >Поділитися</a>|<a  id='look' class="mainmenu">Знайти запис</a>|<a href="?action=all"  class="mainmenu">Відобразити усі записи</a>|<a href="/o.html" >Кролик:D</a>
-	<div id='search'>
-	<form method=get >
-	<input type=hidden name=action value='find'>
-	Де шукати? <select name='where' required>
-<option  selected>Оберіть</option>
-<option value='secrets' >Знайти секрет</option>
-<option value='problems' >Знайти проблему</option>
-</select><br>
-Що шукати? <input type=text required length=20 name=what>
-<input type=submit  value='Шукати'>
-</form>
-</div>
+        <div id='search'>
+            <form method=get >
+                <input type=hidden name=action value='find'>
+                Де шукати? <select name='where' required>
+                <option  selected>Оберіть</option>
+                <option value='secrets' >Знайти секрет</option>
+                <option value='problems' >Знайти проблему</option>
+            </select><br>
+                Що шукати? <input type=text required length=20 name=what>
+                <input type=submit  value='Шукати'>
+            </form>
+        </div>
+
+
+    </div>
+    <br>
+    <h2>О Кролику!</h2>
+    <p class="second"><br /> Очень часто возникает желание <u>поделиться</u> чем либо, отпустить груз, лишь бы  человек <u>выслушал тебя</u>,  расказать о своих проблемах, о том что не дает покоя, и всегда возникает одно большое <span class="but">НО</span>. Говоря о проблемах ты можешь скомпроментировать себя, испортить себе репутацию и много других трудностей происходят при попытке поделиться со знакомым человеком. Поэтому не секрет, что <u>незнакомому все это легче сказать</u>. Однако не всегда он оказывается рядом в нужный момент, <u>мы с вами всегда</u> <span class="but">"Поділись своїм"</span>  </p>
 
 
 </div>
-    <div class="ashow lr">
-        <h2 class="l" >Ваші секрети</h2>
-        <?=$issues;?></div>
 
-    <div class="ashow rl">
-        <h2 class="l"  >Ваші проблеми</h2>
-        <?=$problems;?>
-       </div>
-</div>
-<p class="second"><br /> Очень часто возникает желание <u>поделиться</u> чем либо, отпустить груз, лишь бы  человек <u>выслушал тебя</u>,  расказать о своих проблемах, о том что не дает покоя, и всегда возникает одно большое <span class="but">НО</span>. Говоря о проблемах ты можешь скомпроментировать себя, испортить себе репутацию и много других трудностей происходят при попытке поделиться со знакомым человеком. Поэтому не секрет, что <u>незнакомому все это легче сказать</u>. Однако не всегда он оказывается рядом в нужный момент, <u>мы с вами всегда</u> <span class="but">"Поділись своїм"</span>  </p>
 <div style="clear:both; z-index:7; position:relative; color:rgba(0,0,0,1); position:absolute; bottom:10px; text-align:center; width:80%">Copyright</div>
 <footer > </footer>
-<div id="menu" style="display: none" >
-
-    <div style="    background-color: #07c8d2;
-    padding: 46px 0px 5px 10%"><span id='stab' class="popmenu active">Секрети</span><span id='ptab' class="popmenu nonactive">Проблеми</span></div>
-    <form action='?action=add'  id=secret method=post><table  class="poster">
-
-            <input type='hidden' value='secrets' name='subject'>
-            <tr><td class="info">Секрет</td><td><input type=text class=add name=topic></td></tr>
-            <tr><td class="info">Зміст</td><td><textarea name=content></textarea></td></tr>
-            <tr><td></td><td><input   type='submit' value='Post'></td></tr>
-
-    </table></form> <form action='?action=add'  id='problems' style='display:none' method=post>
-    <table class="poster" >
-
-            <input type='hidden' value='problems' name='subject'>
-            <tr><td class="info">Проблема</td><td><input type=text class=add name=topic ></td></tr>
-            <tr><td class="info">Зміст</td><td><textarea name=content></textarea></td></tr>
-            <tr><td></td><td><input   type='submit' value='Звільнитись'></td></tr>
-
-    </table></form>
-
-</div>
-
-<div id="popedit" style="display: none" >
-
-
-    <form action=''  id="edit_form" method=post><table >
-        <tr><td class="edit"><label for="edittopic">Тема</label><input type=text id="edittopic"  name=name> <input   type='submit' value='Змінити'></td></tr>
-        <tr><td class="edit"><label for="editcontent">Зміст</label> <textarea id="editcontent" name=content></textarea></td></tr>
-
-
-    </table></form>
-</div>
-<script
-        src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
-<script>
-    function edit(e) {
-        var parent=$(e).parent().prevAll('h2');
-
-        var content=$(e).nextAll('p').text();
-        var el=$(e).prevAll('h3');
-        var id=el.attr('data-id');
-        innername="#thisPoP"+id;
-        console.log($(innername).length);
-        if($(innername).length==0){
-            var thisedit=document.createElement("div");
-            thisedit.setAttribute("id","thisPoP"+id);
-            thisedit.innerHTML=$('#popedit').html();
-            $(e).after(thisedit );
-
-            input=innername+" input[type=text]";
-            textarea=innername+" textarea";
-            form_name=innername+" #edit_form";
-            $(form_name).prop("action",$(e).attr('data-href'));
-            $(input).val(el.text());
-            $(textarea).val(content);
-            el.first().hide();
-            $(e).nextAll('p').first().hide();
-        } else{
-            $(innername).remove();
-            el.show();
-            $(e).nextAll('p').show();
-        }
 
 
 
-    }
-$('#look').click(function(){
-$('#search').toggle('slow','swing');
-});
-    $('#add').click(function () {
-        var txt3 = document.createElement("div");				  // Create with DOM
-        txt3.setAttribute('id','bubble');
-        var inner=document.createElement("div");
-        inner.style='position:absolute; width:30%; height:40%; left:25%; top:25%; background-color: #b5bbbb;';
-		
-        inner.innerHTML =  $('#menu').html();
-		close=document.createElement('span');
-		close.setAttribute('id','close');
-		close.innerHTML='CLOSE';
-        $('#menu').html('');
-		txt3.appendChild(close);
-        txt3.appendChild(inner);
-        txt3.style='position:absolute;     top: 0px; width:100%; height:100%; background-color:rgba(1, 11, 76, 0.43);left: 0px; z-index: 1000;'
 
-        $('body').append(txt3);
-        $('input[name=sent]').click(function(){
-            $('form').submit();
-            $('#bubble').remove();
-
-        });
-        $('#stab').click(function () {$(this).removeClass('nonactive');$(this).addClass('active');
-            $('#ptab').removeClass('active');$('#ptab').addClass('nonactive');
-            $('#secret').show();$('#problems').hide();
-
-        });
-        $('#ptab').click(function () {
-            $(this).removeClass('nonactive');$(this).addClass('active');
-            $('#stab').removeClass('active');$('#stab').addClass('nonactive');
-            $('#problems').show();$('#secret').hide();
-
-        });
-		$('#close').click(function() {		
-		$('#menu').html($('#bubble').children('div').first().html());
-		$('#bubble').remove();
-		});
-
-    });
-
-</script>
 </body>
 </html>
 
